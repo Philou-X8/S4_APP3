@@ -1,0 +1,244 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 17036
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Feb 23 10:44:23 EST 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 20
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	F:/Xilinx/Install/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	F:/Xilinx/Install/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	phild
+User home directory: C:/Users/phild
+User working directory: F:/Xilinx/Projects/S4_APP3/S4_APP3
+User country: 	CA
+User language: 	en
+User locale: 	en_CA
+
+RDI_BASEROOT: F:/Xilinx/Install/Vivado
+HDI_APPROOT: F:/Xilinx/Install/Vivado/2020.2
+RDI_DATADIR: F:/Xilinx/Install/Vivado/2020.2/data
+RDI_BINDIR: F:/Xilinx/Install/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/phild/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/phild/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/phild/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	F:/Xilinx/Install/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	F:/Xilinx/Projects/S4_APP3/S4_APP3/vivado.log
+Vivado journal file location: 	F:/Xilinx/Projects/S4_APP3/S4_APP3/vivado.jou
+Engine tmp dir: 	F:/Xilinx/Projects/S4_APP3/S4_APP3/.Xil/Vivado-17036-DESKTOP-8BOTKE1
+
+Xilinx Environment Variables
+----------------------------
+XILINX: F:/Xilinx/Install/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: F:/Xilinx/Install/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: F:/Xilinx/Install/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: F:/Xilinx/Install/Vivado/2020.2
+XILINX_SDK: F:/Xilinx/Install/Vitis/2020.2
+XILINX_VITIS: F:/Xilinx/Install/Vitis/2020.2
+XILINX_VIVADO: F:/Xilinx/Install/Vivado/2020.2
+XILINX_VIVADO_HLS: F:/Xilinx/Install/Vivado/2020.2
+
+
+GUI allocated memory:	133 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,060 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 72 MB (+73501kb) [00:00:04]
+// [Engine Memory]: 1,060 MB (+959617kb) [00:00:04]
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: F:\Xilinx\Projects\S4_APP3\S4_APP3\mips32_unicycle_reference.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/tetm2701/Documents/Repos/git_gif310-architecture/Processeurs/mips32_unicycle_reference' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 81 MB (+4889kb) [00:00:07]
+// [GUI Memory]: 114 MB (+30348kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  1047 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Install/Vivado/2020.2/data/ip'. 
+// Project name: mips32_unicycle_reference; location: F:/Xilinx/Projects/S4_APP3/S4_APP3; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bz
+// HMemoryUtils.trashcanNow. Engine heap size: 1,060 MB. GUI used memory: 57 MB. Current time: 2/23/24, 10:44:24 AM EST
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd)]", 1, true); // D - Node
+// [GUI Memory]: 123 MB (+3815kb) [00:00:15]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// [GUI Memory]: 135 MB (+6092kb) [00:00:15]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Controleur : controleur(Behavioral) (controleur.vhd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cr): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7z010clg400-1 Top: mips_unicycle_top 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,396 MB. GUI used memory: 75 MB. Current time: 2/23/24, 10:45:04 AM EST
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,532 MB. GUI used memory: 75 MB. Current time: 2/23/24, 10:45:07 AM EST
+// [Engine Memory]: 1,557 MB (+466089kb) [00:00:52]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 1,680 MB (+46810kb) [00:00:52]
+// [GUI Memory]: 149 MB (+7378kb) [00:00:53]
+// Schematic: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1478.703 ; gain = 250.344 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1563.539 ; gain = 335.180 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1563.539 ; gain = 335.180 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1563.539 ; gain = 335.180 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1563.539 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/constrs_1/imports/DefinitionHorloge.xdc] Finished Parsing XDC File [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/constrs_1/imports/DefinitionHorloge.xdc] Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1670.742 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1814.086 ; gain = 585.727 
+// Tcl Message: 23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1814.086 ; gain = 718.914 
+// [GUI Memory]: 159 MB (+2609kb) [00:00:53]
+// 'dV' command handler elapsed time: 14 seconds
+// Elapsed time: 12 seconds
+dismissDialog("Open Elaborated Design"); // bz
+// Elapsed time: 157 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_Alu : alu(comport) (alu.vhd)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 104 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Controleur : controleur(Behavioral) (controleur.vhd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Controleur : controleur(Behavioral) (controleur.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 38 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Controleur : controleur(Behavioral) (controleur.vhd)]", 2, false); // D
+// Elapsed time: 193 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ak
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+selectButton(RDIResource.HJFileChooserHelpers_JUMP_TO_DOWNLOADS_DIRECTORY, (String) null); // a
+// Elapsed time: 102 seconds
+selectButton(RDIResource.HJFileChooserHelpers_JUMP_TO_DOWNLOADS_DIRECTORY, (String) null); // a
+selectButton(RDIResource.HJFileChooserHelpers_REFRESH_FOLDER_VIEW_TO_REFLECT_EXTERNAL, (String) null); // a
+setFileChooser("C:/Users/phild/Downloads/MemDonneesWideDual.vhd");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 124 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/phild/Downloads/MemDonneesWideDual.vhd 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MemDonneesWideDual(Behavioral) (MemDonneesWideDual.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MemDonneesWideDual(Behavioral) (MemDonneesWideDual.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("MemDonneesWideDual.vhd", 106, 175); // bP
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd)]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemDonnees : MemDonnees(Behavioral) (MemDonnees.vhd)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mips_unicycle_top(Behavioral) (mips_unicycle_top.vhd), inst_Datapath : mips_datapath_unicycle(Behavioral) (mips_datapath_unicycle.vhd), inst_MemDonnees : MemDonnees(Behavioral) (MemDonnees.vhd)]", 7, false, false, false, false, false, true); // D - Double Click
+// [GUI Memory]: 170 MB (+3762kb) [00:11:57]
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MemDonnees.vhd", 4); // m
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MemDonneesWideDual.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MemDonnees.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 2); // m
+selectCodeEditor("mips_datapath_unicycle.vhd", 158, 245); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 72, 230); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 84, 252); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 203, 250); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 135, 200); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 135, 200, false, false, false, false, true); // bP - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MemDonnees.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 2); // m
+selectCodeEditor("mips_datapath_unicycle.vhd", 319, 212); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MemDonnees.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mips_datapath_unicycle.vhd", 2); // m
+selectCodeEditor("mips_datapath_unicycle.vhd", 164, 110); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 59, 178); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 59, 178, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 24 seconds
+selectCodeEditor("mips_datapath_unicycle.vhd", 176, 214); // bP
+selectCodeEditor("mips_datapath_unicycle.vhd", 176, 214, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 11, true); // u - Node
+// Run Command: PAResourceCommand.PACommandNames_SHOW_RTL_DESIGN
