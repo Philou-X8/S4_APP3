@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Feb 23 10:44:08 2024
+# Process ID: 17036
+# Current directory: F:/Xilinx/Projects/S4_APP3/S4_APP3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10064 F:\Xilinx\Projects\S4_APP3\S4_APP3\mips32_unicycle_reference.xpr
+# Log file: F:/Xilinx/Projects/S4_APP3/S4_APP3/vivado.log
+# Journal file: F:/Xilinx/Projects/S4_APP3/S4_APP3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.xpr
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+add_files -norecurse C:/Users/phild/Downloads/MemDonneesWideDual.vhd

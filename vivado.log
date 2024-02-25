@@ -2,79 +2,31 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Feb 23 10:44:08 2024
-# Process ID: 17036
-# Current directory: F:/Xilinx/Projects/S4_APP3/S4_APP3
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10064 F:\Xilinx\Projects\S4_APP3\S4_APP3\mips32_unicycle_reference.xpr
-# Log file: F:/Xilinx/Projects/S4_APP3/S4_APP3/vivado.log
-# Journal file: F:/Xilinx/Projects/S4_APP3/S4_APP3\vivado.jou
+# Start of session at: Sun Feb 25 14:20:15 2024
+# Process ID: 2772
+# Current directory: C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/S4_APP3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5872 C:\Users\Laurent\OneDrive - USherbrooke\Documents_Uni\S4\App3\S4_APP3\mips32_unicycle_reference.xpr
+# Log file: C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/S4_APP3/vivado.log
+# Journal file: C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/S4_APP3\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/tetm2701/Documents/Repos/git_gif310-architecture/Processeurs/mips32_unicycle_reference' since last save.
-WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.gen/sources_1', nor could it be found using path 'C:/Users/tetm2701/Documents/Repos/git_gif310-architecture/Processeurs/mips32_unicycle_reference/mips32_unicycle_reference.gen/sources_1'.
-WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.ip_user_files', nor could it be found using path 'C:/Users/tetm2701/Documents/Repos/git_gif310-architecture/Processeurs/mips32_unicycle_reference/mips32_unicycle_reference.ip_user_files'.
+open_project {C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/S4_APP3/mips32_unicycle_reference.xpr}
+INFO: [Project 1-313] Project file moved from 'F:/Xilinx/Projects/S4_APP3/S4_APP3' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/S4_APP3/mips32_unicycle_reference.gen/sources_1', nor could it be found using path 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.gen/sources_1'.
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/S4_APP3/mips32_unicycle_reference.ip_user_files', nor could it be found using path 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.ip_user_files'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/phild/Downloads/MemDonneesWideDual.vhd'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Install/Vivado/2020.2/data/ip'.
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
-Starting synth_design
-Using part: xc7z010clg400-1
-Top: mips_unicycle_top
-INFO: [Device 21-403] Loading part xc7z010clg400-1
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1478.703 ; gain = 250.344
----------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'mips_unicycle_top' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:31]
-INFO: [Synth 8-3491] module 'controleur' declared at 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:20' bound to instance 'inst_Controleur' of component 'controleur' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:110]
-INFO: [Synth 8-638] synthesizing module 'controleur' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:45]
-INFO: [Synth 8-256] done synthesizing module 'controleur' (1#1) [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/controleur.vhd:45]
-INFO: [Synth 8-3491] module 'mips_datapath_unicycle' declared at 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:22' bound to instance 'inst_Datapath' of component 'mips_datapath_unicycle' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:135]
-INFO: [Synth 8-638] synthesizing module 'mips_datapath_unicycle' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:49]
-INFO: [Synth 8-3491] module 'MemInstructions' declared at 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd:21' bound to instance 'inst_MemInstr' of component 'MemInstructions' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:182]
-INFO: [Synth 8-638] synthesizing module 'MemInstructions' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd:28]
-INFO: [Synth 8-256] done synthesizing module 'MemInstructions' (2#1) [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/MemInstructions.vhd:28]
-INFO: [Synth 8-3491] module 'BancRegistres' declared at 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/registres.vhd:20' bound to instance 'inst_Registres' of component 'BancRegistres' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:199]
-INFO: [Synth 8-638] synthesizing module 'BancRegistres' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/registres.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'BancRegistres' (3#1) [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/registres.vhd:32]
-INFO: [Synth 8-3491] module 'alu' declared at 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd:20' bound to instance 'inst_Alu' of component 'alu' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:223]
-INFO: [Synth 8-638] synthesizing module 'alu' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'alu' (4#1) [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/alu.vhd:32]
-INFO: [Synth 8-3491] module 'MemDonnees' declared at 'F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/MemDonnees.vhd:21' bound to instance 'inst_MemDonnees' of component 'MemDonnees' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:237]
-INFO: [Synth 8-638] synthesizing module 'MemDonnees' [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/MemDonnees.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'MemDonnees' (5#1) [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/MemDonnees.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'mips_datapath_unicycle' (6#1) [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_datapath_unicycle.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'mips_unicycle_top' (7#1) [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/mips_unicycle_top.vhd:31]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1563.539 ; gain = 335.180
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1563.539 ; gain = 335.180
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1563.539 ; gain = 335.180
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1563.539 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/constrs_1/imports/DefinitionHorloge.xdc]
-Finished Parsing XDC File [F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.srcs/constrs_1/imports/DefinitionHorloge.xdc]
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1670.742 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1814.086 ; gain = 585.727
-23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1814.086 ; gain = 718.914
-add_files -norecurse C:/Users/phild/Downloads/MemDonneesWideDual.vhd
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1093.695 ; gain = 0.000
+add_files -norecurse {{C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/S4_APP3/mips32_unicycle_reference.srcs/sources_1/imports/brel0901-durp2003.viterbi.asm}}
+import_files -norecurse {{C:/Users/Laurent/OneDrive - USherbrooke/Documents_Uni/S4/App3/MemDonneesWideDual.vhd}}
+export_ip_user_files -of_objects  [get_files C:/Users/phild/Downloads/MemDonneesWideDual.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/phild/Downloads/MemDonneesWideDual.vhd
+<<<<<<< Updated upstream
+=======
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 25 14:33:48 2024...
+>>>>>>> Stashed changes
