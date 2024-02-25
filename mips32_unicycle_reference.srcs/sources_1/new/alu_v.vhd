@@ -96,4 +96,5 @@ begin
 	   );
 	   
     o_v_zero <= '1' when (unsigned(s_v_zero) = 0) else '0';
+    
 end Behavioral;
