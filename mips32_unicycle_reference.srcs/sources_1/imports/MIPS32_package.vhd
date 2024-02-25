@@ -36,8 +36,8 @@ package MIPS32_package is
     constant ALU_NULL : std_logic_vector( 3 downto 0 ) := "1111";
 
     -- function code for SIMD
-    constant ALUV_ADDV  : std_logic_vector( 3 downto 0 ) := "0010"; -- added for SIMD -- to be removed
-    constant ALUV_ROTV  : std_logic_vector( 3 downto 0 ) := "0100"; -- added for SIMD -- to be removed
+    constant ALUV_MOVNV  : std_logic_vector( 3 downto 0 ) := "0100"; -- added for SIMD
+    constant ALUV_MOVZV  : std_logic_vector( 3 downto 0 ) := "0101"; -- added for SIMD
     
     -- codes du champ function des instructions de type R
     -- Ces codes sont définis par l'encodage des instructions MIPS
@@ -79,7 +79,7 @@ package MIPS32_package is
     constant OP_MOVZV : std_logic_vector( 5 downto 0 ) := "010111"; -- added for SIMD
 
     constant OP_ROTV  : std_logic_vector( 5 downto 0 ) := "011100"; -- added for SIMD
-    constant OP_STLV  : std_logic_vector( 5 downto 0 ) := "011100"; -- added for SIMD
+    constant OP_STLV  : std_logic_vector( 5 downto 0 ) := "011100"; -- added for SIMD -- to be removed: Vtype operation
 	
 	
 	constant c_Mips32_Nop	 	: std_logic_vector(31 downto 0) := X"00000000";

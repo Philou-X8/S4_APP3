@@ -30,6 +30,9 @@ Port (
     o_MemWrite  	: out std_logic;
     o_ALUSrc    	: out std_logic;
     o_RegWrite  	: out std_logic;
+    
+    o_simd  	    : out std_logic; -- should use SIMD instead
+    
 	
 	-- Sorties supp. vs 4.17
     o_Jump 			: out std_logic;
@@ -81,8 +84,10 @@ begin
             when OP_SWV =>
 				o_AluFunct <= ALU_ADD;
             when OP_MOVNV =>
-				o_AluFunct <= ALU_NULL;
+				o_AluFunct <= ALUV_MOVNV;
             when OP_MOVZV =>
+				o_AluFunct <= ALUV_MOVZV;
+            when OP_ROTV =>
 				o_AluFunct <= ALU_NULL;
                 
             
@@ -168,6 +173,12 @@ begin
 	o_mfhi          <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MFHI else '0';
 	
 	-- SIMD control
-	--o_UseVect <= <= '1' when ( ) else '0';
+	o_simd		    <= '1' when i_Op = OP_Vtype or 
+								i_Op = OP_LWV or 
+								i_Op = OP_SWV or 
+								i_Op = OP_MOVNV or 
+								i_Op = OP_MOVZV or 
+								i_Op = OP_ROTV 
+						else '0';
 
 end Behavioral;
