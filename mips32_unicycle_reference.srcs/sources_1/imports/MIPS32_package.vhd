@@ -34,6 +34,10 @@ package MIPS32_package is
     constant ALU_MULTU: std_logic_vector( 3 downto 0 ) := "1101";
     constant ALU_SLL16: std_logic_vector( 3 downto 0 ) := "1110";
     constant ALU_NULL : std_logic_vector( 3 downto 0 ) := "1111";
+
+    -- function code for SIMD
+    constant ALUV_ADDV  : std_logic_vector( 3 downto 0 ) := "0010"; -- added for SIMD
+    constant ALUV_ROTV  : std_logic_vector( 3 downto 0 ) := "0100"; -- added for SIMD
     
     -- codes du champ function des instructions de type R
     -- Ces codes sont définis par l'encodage des instructions MIPS
@@ -58,6 +62,7 @@ package MIPS32_package is
     
     -- opcodes dans le décodage d'instructions
     constant OP_Rtype : std_logic_vector( 5 downto 0 ) := "000000";
+    constant OP_Vtype : std_logic_vector( 5 downto 0 ) := "000001"; -- SIMD R type instruction
     constant OP_J     : std_logic_vector( 5 downto 0 ) := "000010";
     constant OP_JAL   : std_logic_vector( 5 downto 0 ) := "000011";
     constant OP_BEQ   : std_logic_vector( 5 downto 0 ) := "000100";
@@ -67,6 +72,8 @@ package MIPS32_package is
     constant OP_LUI   : std_logic_vector( 5 downto 0 ) := "001111";
     constant OP_LW    : std_logic_vector( 5 downto 0 ) := "100011";
     constant OP_SW    : std_logic_vector( 5 downto 0 ) := "101011";
+
+    constant OP_LWV    : std_logic_vector( 5 downto 0 ) := "010100"; -- added for SIMD
 	
 	
 	constant c_Mips32_Nop	 	: std_logic_vector(31 downto 0) := X"00000000";

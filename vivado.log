@@ -78,3 +78,5 @@ RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Mem
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1814.086 ; gain = 718.914
 add_files -norecurse C:/Users/phild/Downloads/MemDonneesWideDual.vhd
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 23 15:30:38 2024...
