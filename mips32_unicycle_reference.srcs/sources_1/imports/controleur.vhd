@@ -73,6 +73,19 @@ begin
 				o_AluFunct <= ALU_ADD;
 			when OP_LW => 
 				o_AluFunct <= ALU_ADD;
+            ------------ SIMD cases: ------------
+            when OP_Vtype => 
+                o_AluFunct <= s_R_funct_decode;
+            when OP_LWV =>
+				o_AluFunct <= ALU_ADD;
+            when OP_SWV =>
+				o_AluFunct <= ALU_ADD;
+            when OP_MOVNV =>
+				o_AluFunct <= ALU_NULL;
+            when OP_MOVZV =>
+				o_AluFunct <= ALU_NULL;
+                
+            
             -- when OP_??? =>   -- autres cas?
 			-- sinon
             when others =>
@@ -153,5 +166,8 @@ begin
 	o_alu_mult      <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MULTU else '0';
 	o_mflo          <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MFLO else '0';
 	o_mfhi          <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MFHI else '0';
+	
+	-- SIMD control
+	--o_UseVect <= <= '1' when ( ) else '0';
 
 end Behavioral;
