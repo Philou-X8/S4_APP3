@@ -114,13 +114,15 @@ architecture Behavioral of mips_datapath_unicycle is
                i_v_WDest   : in  std_logic_vector (4 downto 0);
                i_v_WE      : in  std_logic;
                o_v_RS1_DAT : out std_logic_vector (127 downto 0);
-               o_v_RS2_DAT : out std_logic_vector (127 downto 0));
+               o_v_RS2_DAT : out std_logic_vector (127 downto 0);
+               o_v_RS3_DAT : out std_logic_vector (127 downto 0));
     end component;
     
     component simd_core_v is
     Port ( 
         i_simd_a          : in std_logic_vector (127 downto 0);
         i_simd_b          : in std_logic_vector (127 downto 0);
+        i_simd_c          : in std_logic_vector (127 downto 0);
         i_simd_alu_funct  : in std_logic_vector (3 downto 0);
         i_simd_shamt      : in std_logic_vector (4 downto 0);
         
@@ -185,6 +187,7 @@ architecture Behavioral of mips_datapath_unicycle is
     
     signal s_VectRegData1        : std_logic_vector(127 downto 0);
     signal s_VectRegData2        : std_logic_vector(127 downto 0);
+    signal s_VectRegData3        : std_logic_vector(127 downto 0);
     signal s_SimdCoreResult             : std_logic_vector(127 downto 0);
     
     signal s_VectUnused             : std_logic_vector(255 downto 0);
@@ -351,7 +354,8 @@ port map (
 	i_v_WDest      => s_VectRegWriteAdress,
 	i_v_WE         => i_VectRegWrite,
 	o_v_RS1_DAT    => s_VectRegData1,
-	o_v_RS2_DAT    => s_VectRegData2
+	o_v_RS2_DAT    => s_VectRegData2,
+	o_v_RS3_DAT    => s_VectRegData3
 	);
 	
 	
@@ -359,6 +363,7 @@ inst_SIMD_core: simd_core_v
 port map( 
 	i_simd_a         => s_VectRegData1,
 	i_simd_b         => s_VectRegData2,
+	i_simd_c         => s_VectRegData3,
 	i_simd_alu_funct => i_alu_funct,
 	i_simd_shamt     => s_shamt,
 	

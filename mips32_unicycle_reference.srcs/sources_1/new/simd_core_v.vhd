@@ -28,6 +28,7 @@ entity simd_core_v is
 Port ( 
 	i_simd_a          : in std_logic_vector (127 downto 0);
 	i_simd_b          : in std_logic_vector (127 downto 0);
+	i_simd_c          : in std_logic_vector (127 downto 0);
 	i_simd_alu_funct  : in std_logic_vector (3 downto 0);
 	i_simd_shamt      : in std_logic_vector (4 downto 0);
 	
@@ -45,8 +46,8 @@ architecture Behavioral of simd_core_v is
     
     component alu_v is
     Port ( 
-        i_v_a          : in std_logic_vector (127 downto 0);
-        i_v_b          : in std_logic_vector (127 downto 0);
+        i_v_a          : in std_logic_vector (127 downto 0); -- rs
+        i_v_b          : in std_logic_vector (127 downto 0); -- rt
         i_v_alu_funct  : in std_logic_vector (3 downto 0);
         i_v_shamt      : in std_logic_vector (4 downto 0);
         o_v_result     : out std_logic_vector (127 downto 0);
@@ -75,17 +76,39 @@ begin
     begin
         case i_simd_opcode is
             when OP_MOVNV =>
-                if( unsigned(i_simd_word) /= 0 ) then
-                    s_v_mov <= i_simd_a;      
-                else
-                    s_v_mov <= i_simd_b;
+                if( unsigned(i_simd_b(127 downto 96)) /= 0 ) then
+                     s_v_mov(127 downto 96) <= i_simd_a(127 downto 96); -- change value
+                else s_v_mov(127 downto 96) <= i_simd_c(127 downto 96); -- keep default
                 end if;
-                --s_v_result <= i_simd_a when (unsigned(i_simd_word) = 0 ) else i_simd_b;
+                if( unsigned(i_simd_b(95 downto 64)) /= 0 ) then
+                     s_v_mov(95 downto 64) <= i_simd_a(95 downto 64); -- change value
+                else s_v_mov(95 downto 64) <= i_simd_c(95 downto 64); -- keep default
+                end if;
+                if( unsigned(i_simd_b(63 downto 32)) /= 0 ) then
+                     s_v_mov(63 downto 32) <= i_simd_a(63 downto 32); -- change value
+                else s_v_mov(63 downto 32) <= i_simd_c(63 downto 32); -- keep default
+                end if;
+                if( unsigned(i_simd_b(31 downto 0)) /= 0 ) then
+                     s_v_mov(31 downto 0) <= i_simd_a(31 downto 0); -- change value
+                else s_v_mov(31 downto 0) <= i_simd_c(31 downto 0); -- keep default
+                end if;
+                
             when OP_MOVZV =>
-                if( unsigned(i_simd_word) = 0 ) then
-                    s_v_mov <= i_simd_a;      
-                else
-                    s_v_mov <= i_simd_b;
+                if( unsigned(i_simd_b(127 downto 96)) = 0 ) then
+                     s_v_mov(127 downto 96) <= i_simd_a(127 downto 96); -- change value
+                else s_v_mov(127 downto 96) <= i_simd_c(127 downto 96); -- keep default
+                end if;
+                if( unsigned(i_simd_b(95 downto 64)) = 0 ) then
+                     s_v_mov(95 downto 64) <= i_simd_a(95 downto 64); -- change value
+                else s_v_mov(95 downto 64) <= i_simd_c(95 downto 64); -- keep default
+                end if;
+                if( unsigned(i_simd_b(63 downto 32)) = 0 ) then
+                     s_v_mov(63 downto 32) <= i_simd_a(63 downto 32); -- change value
+                else s_v_mov(63 downto 32) <= i_simd_c(63 downto 32); -- keep default
+                end if;
+                if( unsigned(i_simd_b(31 downto 0)) = 0 ) then
+                     s_v_mov(31 downto 0) <= i_simd_a(31 downto 0); -- change value
+                else s_v_mov(31 downto 0) <= i_simd_c(31 downto 0); -- keep default
                 end if;
             
             when OP_ROTV =>

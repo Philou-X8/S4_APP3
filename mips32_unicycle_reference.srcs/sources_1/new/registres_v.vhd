@@ -34,7 +34,8 @@ entity registres_v is
            i_v_WDest   : in  std_logic_vector (4 downto 0);
            i_v_WE      : in  std_logic;
            o_v_RS1_DAT : out std_logic_vector (127 downto 0);
-           o_v_RS2_DAT : out std_logic_vector (127 downto 0));
+           o_v_RS2_DAT : out std_logic_vector (127 downto 0);
+           o_v_RS3_DAT : out std_logic_vector (127 downto 0));
 end registres_v;
 
 architecture Behavioral of registres_v is
@@ -67,5 +68,10 @@ begin
                  & regs( to_integer( unsigned(i_v_RS2)+1 ))
                  & regs( to_integer( unsigned(i_v_RS2)+2 ))
                  & regs( to_integer( unsigned(i_v_RS2)+3 ));
+                 
+    o_v_RS3_DAT <= regs( to_integer(unsigned(i_v_WDest))) 
+                 & regs( to_integer( unsigned(i_v_WDest)+1 ))
+                 & regs( to_integer( unsigned(i_v_WDest)+2 ))
+                 & regs( to_integer( unsigned(i_v_WDest)+3 ));
     
 end Behavioral;
