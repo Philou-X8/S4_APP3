@@ -84,9 +84,9 @@ begin
             when OP_SWV =>
 				o_AluFunct <= ALU_ADD;
             when OP_MOVNV =>
-				o_AluFunct <= ALUV_MOVNV;
+				o_AluFunct <= ALU_NULL;
             when OP_MOVZV =>
-				o_AluFunct <= ALUV_MOVZV;
+				o_AluFunct <= ALU_NULL;
             when OP_ROTV =>
 				o_AluFunct <= ALU_NULL;
                 
