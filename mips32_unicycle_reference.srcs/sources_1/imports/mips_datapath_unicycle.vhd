@@ -42,11 +42,11 @@ Port (
 	i_SignExtend 	: in std_logic;
 	
 	
-    i_simd  	    : out std_logic; -- if system should use SIMD instead
-    i_VectRegWrite  : out std_logic; 
-    i_VectRegDst    : out std_logic; 
-    i_VectMemRead   : out std_logic;
-    i_VectMemWrite  : out std_logic;
+    i_simd  	    : in std_logic; -- if system should use SIMD instead
+    i_VectRegWrite  : in std_logic; 
+    i_VectRegDst    : in std_logic; 
+    i_VectMemRead   : in std_logic;
+    i_VectMemWrite  : in std_logic;
 
 	o_Instruction 	: out std_logic_vector (31 downto 0);
 	o_PC		 	: out std_logic_vector (31 downto 0)

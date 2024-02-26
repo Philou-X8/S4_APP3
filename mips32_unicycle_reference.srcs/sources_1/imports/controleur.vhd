@@ -36,6 +36,8 @@ Port (
     o_VectRegDst    : out std_logic; 
     o_VectMemRead   : out std_logic;
     o_VectMemWrite  : out std_logic;
+    
+    o_temp_test : out std_logic;
 	
 	-- Sorties supp. vs 4.17
     o_Jump 			: out std_logic;
@@ -53,11 +55,6 @@ architecture Behavioral of controleur is
     signal s_R_funct_decode   : std_logic_vector(3 downto 0);
     
     
-    signal s_simd  	    : std_logic := '0'; -- if system should use SIMD instead
-    signal s_VectRegWrite  : std_logic := '0'; 
-    signal s_VectRegDst    : std_logic := '0'; 
-    signal s_VectMemRead   : std_logic := '0';
-    signal s_VectMemWrite  : std_logic := '0';
 
 begin
 
@@ -184,15 +181,14 @@ begin
 	o_mfhi          <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MFHI else '0';
 	
 	-- SIMD control
-	s_simd		    <= '1' when (i_Op = OP_Vtype or 
+	o_simd		    <= '1' when (i_Op = OP_Vtype or 
 								i_Op = OP_LWV or 
 								i_Op = OP_SWV or 
 								i_Op = OP_MOVNV or 
 								i_Op = OP_MOVZV or 
-								i_Op = OP_ROTV  or
-								i_Op = OP_Rtype) -- OP_Rtype TEMP testing
+								i_Op = OP_ROTV
 						else '0';
-	o_simd <= s_simd;
+	
 	o_VectRegWrite  <= '1' when i_Op = OP_Vtype or 
 								i_Op = OP_LWV or 
 								i_Op = OP_MOVNV or 
