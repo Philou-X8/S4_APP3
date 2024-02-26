@@ -44,6 +44,7 @@ Port (
 	
     i_simd  	    : out std_logic; -- if system should use SIMD instead
     i_VectRegWrite  : out std_logic; 
+    i_VectRegDst    : out std_logic; 
     i_VectMemRead   : out std_logic;
     i_VectMemWrite  : out std_logic;
 
@@ -102,6 +103,37 @@ architecture Behavioral of mips_datapath_unicycle is
 		o_zero		: out std_logic
 		);
 	end component;
+	
+    ---- SIMD COMPONENT ----
+    component registres_v is
+        Port ( clk         : in  std_logic;
+               reset       : in  std_logic;
+               i_v_RS1     : in  std_logic_vector (4 downto 0); -- 8 vector, 
+               i_v_RS2     : in  std_logic_vector (4 downto 0);
+               i_v_Wr_DAT  : in  std_logic_vector (127 downto 0);
+               i_v_WDest   : in  std_logic_vector (4 downto 0);
+               i_v_WE      : in  std_logic;
+               o_v_RS1_DAT : out std_logic_vector (127 downto 0);
+               o_v_RS2_DAT : out std_logic_vector (127 downto 0));
+    end component;
+    
+    component simd_core_v is
+    Port ( 
+        i_simd_a          : in std_logic_vector (127 downto 0);
+        i_simd_b          : in std_logic_vector (127 downto 0);
+        i_simd_alu_funct  : in std_logic_vector (3 downto 0);
+        i_simd_shamt      : in std_logic_vector (4 downto 0);
+        
+        i_simd_opcode     : in std_logic_vector (5 downto 0); 
+        i_simd_word       : in std_logic_vector (31 downto 0); -- word-sized input
+        i_simd_enabled    : in std_logic;
+        
+        o_simd_result     : out std_logic_vector (127 downto 0);
+        o_simd_multRes    : out std_logic_vector (255 downto 0);
+        o_simd_zero       : out std_logic
+        );
+    end component;
+    
 
 	constant c_Registre31		 : std_logic_vector(4 downto 0) := "11111";
 	signal s_zero        : std_logic;
@@ -142,11 +174,21 @@ architecture Behavioral of mips_datapath_unicycle is
     signal r_HI             : std_logic_vector(31 downto 0);
     signal r_LO             : std_logic_vector(31 downto 0);
     
-    
+    -- SIMD
     signal s_MemReadV       : std_logic_vector(127 downto 0);
     signal s_MemWriteV      : std_logic_vector(127 downto 0);
 	signal s_EnMemReadV           : std_logic;
 	signal s_EnMemWriteV           : std_logic;
+	
+    signal s_VectToWriteReg        : std_logic_vector(127 downto 0);
+    signal s_VectRegWriteAdress        : std_logic_vector(4 downto 0);
+    
+    signal s_VectRegData1        : std_logic_vector(127 downto 0);
+    signal s_VectRegData2        : std_logic_vector(127 downto 0);
+    signal s_SimdCoreResult             : std_logic_vector(127 downto 0);
+    
+    signal s_VectUnused             : std_logic_vector(255 downto 0);
+	signal s_VectUnusedB           : std_logic;
 	
 
 begin
@@ -291,5 +333,44 @@ begin
         end if;
     end if;
 end process;
+		
+------------------------------------------------------------------------
+---- S I M D
+------------------------------------------------------------------------	
+s_VectToWriteReg <= s_MemReadV when (i_VectMemRead = '1') else s_SimdCoreResult;
+
+s_VectRegWriteAdress <= s_rt when (i_VectRegDst = '0') else s_rd;
+      
+inst_Registres_v: registres_v 
+port map ( 
+	clk          => clk,
+	reset        => reset,
+	i_v_RS1        => s_rs,
+	i_v_RS2        => s_rt,
+	i_v_Wr_DAT     => s_VectToWriteReg,
+	i_v_WDest      => s_VectRegWriteAdress,
+	i_v_WE         => i_VectRegWrite,
+	o_v_RS1_DAT    => s_VectRegData1,
+	o_v_RS2_DAT    => s_VectRegData2
+	);
+	
+	
+inst_SIMD_core: simd_core_v 
+port map( 
+	i_simd_a         => s_VectRegData1,
+	i_simd_b         => s_VectRegData2,
+	i_simd_alu_funct => i_alu_funct,
+	i_simd_shamt     => s_shamt,
+	
+	i_simd_opcode     => s_opcode,
+	i_simd_word     => s_VectUnused(31 downto 0),
+	i_simd_enabled     => i_simd,
+	
+	o_simd_result    => s_SimdCoreResult,
+	o_simd_multRes   => s_VectUnused,
+	o_simd_zero      => s_VectUnusedB
+	);
+	
+	
         
 end Behavioral;

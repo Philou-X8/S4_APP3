@@ -33,6 +33,7 @@ Port (
     
     o_simd  	    : out std_logic; -- if system should use SIMD instead
     o_VectRegWrite  : out std_logic; 
+    o_VectRegDst    : out std_logic; 
     o_VectMemRead   : out std_logic;
     o_VectMemWrite  : out std_logic;
 	
@@ -189,6 +190,11 @@ begin
 								i_Op = OP_MOVNV or 
 								i_Op = OP_MOVZV or 
 								i_Op = OP_ROTV 
+						else '0';
+						
+    o_VectRegDst    <= '1' when i_Op = OP_Vtype or
+								i_Op = OP_MOVNV or
+								i_Op = OP_MOVZV
 						else '0';
     
     o_VectMemRead 	<= '1' when i_Op = OP_LWV else '0';

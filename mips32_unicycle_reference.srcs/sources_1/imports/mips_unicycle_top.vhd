@@ -46,6 +46,7 @@ Port (
         
     o_simd  	    : out std_logic; -- if system should use SIMD instead
     o_VectRegWrite  : out std_logic; 
+    o_VectRegDst  : out std_logic; 
     o_VectMemRead   : out std_logic;
     o_VectMemWrite  : out std_logic;
 	
@@ -76,6 +77,7 @@ Port (
 	
     i_simd  	    : out std_logic; -- if system should use SIMD instead
     i_VectRegWrite  : out std_logic; 
+    i_VectRegDst    : out std_logic; 
     i_VectMemRead   : out std_logic;
     i_VectMemWrite  : out std_logic;
 
@@ -110,6 +112,7 @@ end component;
 	
 	signal s_simd     : std_logic;
 	signal s_VectRegWrite       : std_logic;
+	signal s_VectRegDst       : std_logic;
 	signal s_VectMemRead           : std_logic;
 	signal s_VectMemWrite           : std_logic;
 	
@@ -140,6 +143,7 @@ Port map(
     
     o_simd  	    => s_simd,
     o_VectRegWrite  => s_VectRegWrite,
+    o_VectRegDst  => s_VectRegDst,
     o_VectMemRead   => s_VectMemRead,
     o_VectMemWrite  => s_VectMemWrite,
 	
@@ -177,6 +181,7 @@ Port map(
 	
     i_simd  	    => s_simd,
     i_VectRegWrite  => s_VectRegWrite,
+    i_VectRegDst  => s_VectRegDst,
     i_VectMemRead   => s_VectMemRead,
     i_VectMemWrite  => s_VectMemWrite,
     
