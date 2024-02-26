@@ -31,10 +31,10 @@ Port (
     o_ALUSrc    	: out std_logic;
     o_RegWrite  	: out std_logic;
     
-    o_simd  	    : out std_logic; -- should use SIMD instead
+    o_simd  	    : out std_logic; -- if system should use SIMD instead
+    o_VectRegWrite  : out std_logic; 
     o_VectMemRead   : out std_logic;
     o_VectMemWrite  : out std_logic;
-    
 	
 	-- Sorties supp. vs 4.17
     o_Jump 			: out std_logic;
@@ -151,6 +151,7 @@ begin
 	o_ALUSrc 		<= '0' when i_Op = OP_Rtype or
 								i_Op = OP_BEQ
 						else '1';
+						
 	o_Branch 		<= '1' when i_Op = OP_BEQ   else '0';
 	o_MemRead 		<= '1' when i_Op = OP_LW else '0';
 	o_MemWrite 		<= '1' when i_Op = OP_SW else '0';
@@ -178,6 +179,13 @@ begin
 	o_simd		    <= '1' when i_Op = OP_Vtype or 
 								i_Op = OP_LWV or 
 								i_Op = OP_SWV or 
+								i_Op = OP_MOVNV or 
+								i_Op = OP_MOVZV or 
+								i_Op = OP_ROTV 
+						else '0';
+						
+	o_VectRegWrite  <= '1' when i_Op = OP_Vtype or 
+								i_Op = OP_LWV or 
 								i_Op = OP_MOVNV or 
 								i_Op = OP_MOVZV or 
 								i_Op = OP_ROTV 

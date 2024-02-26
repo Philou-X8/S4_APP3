@@ -43,6 +43,11 @@ Port (
     o_MemWrite  : out std_logic;
     o_ALUSrc    : out std_logic;
     o_RegWrite  : out std_logic;
+        
+    o_simd  	    : out std_logic; -- if system should use SIMD instead
+    o_VectRegWrite  : out std_logic; 
+    o_VectMemRead   : out std_logic;
+    o_VectMemWrite  : out std_logic;
 	
 	-- Sorties supp. vs 4.17
     o_Jump : out std_logic;
@@ -68,6 +73,11 @@ Port (
 	i_ALUSrc      	: in std_logic;
 	i_MemRead 		: in std_logic;
 	i_MemWrite	  	: in std_logic;
+	
+    i_simd  	    : out std_logic; -- if system should use SIMD instead
+    i_VectRegWrite  : out std_logic; 
+    i_VectMemRead   : out std_logic;
+    i_VectMemWrite  : out std_logic;
 
 	i_jump   	  	: in std_logic;
 	i_jump_register : in std_logic;
@@ -97,6 +107,12 @@ end component;
 	signal s_alu_mult       : std_logic;
 	signal s_mflo           : std_logic;
 	signal s_mfhi           : std_logic;
+	
+	signal s_simd     : std_logic;
+	signal s_VectRegWrite       : std_logic;
+	signal s_VectMemRead           : std_logic;
+	signal s_VectMemWrite           : std_logic;
+	
 
 	
     signal s_Instruction    : std_logic_vector(31 downto 0);
@@ -120,6 +136,12 @@ Port map(
     o_MemWrite  	=> s_MemWrite,
     o_ALUSrc    	=> s_ALUSrc,
     o_RegWrite  	=> s_RegWrite,
+    
+    
+    o_simd  	    => s_simd,
+    o_VectRegWrite  => s_VectRegWrite,
+    o_VectMemRead   => s_VectMemRead,
+    o_VectMemWrite  => s_VectMemWrite,
 	
     o_Jump 			=> s_Jump,
 	o_jump_register => s_jump_register,
@@ -152,6 +174,12 @@ Port map(
     i_mflo          => s_mflo,    
     i_mfhi          => s_mfhi,    
 	i_SignExtend 	=> s_SignExtend,
+	
+    i_simd  	    => s_simd,
+    i_VectRegWrite  => s_VectRegWrite,
+    i_VectMemRead   => s_VectMemRead,
+    i_VectMemWrite  => s_VectMemWrite,
+    
 	o_Instruction 	=> s_Instruction,
 	o_PC			=> o_PC
 );	

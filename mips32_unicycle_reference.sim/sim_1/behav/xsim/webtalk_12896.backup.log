@@ -2,12 +2,12 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Feb 26 09:05:30 2024
-# Process ID: 9500
+# Start of session at: Mon Feb 26 09:35:59 2024
+# Process ID: 12896
 # Current directory: F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.sim/sim_1/behav/xsim/xsim.dir/mips_unicycle_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source F:/Xilinx/Projects/S4_APP3/S4_APP3/mips32_unicycle_reference.sim/sim_1/behav/xsim/xsim.dir/mips_unicycle_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Mon Feb 26 09:05:30 2024...
+INFO: [Common 17-206] Exiting Webtalk at Mon Feb 26 09:35:59 2024...

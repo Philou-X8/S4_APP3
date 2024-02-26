@@ -40,6 +40,12 @@ Port (
 	i_mflo          : in std_logic;
 	i_mfhi          : in std_logic;
 	i_SignExtend 	: in std_logic;
+	
+	
+    i_simd  	    : out std_logic; -- if system should use SIMD instead
+    i_VectRegWrite  : out std_logic; 
+    i_VectMemRead   : out std_logic;
+    i_VectMemWrite  : out std_logic;
 
 	o_Instruction 	: out std_logic_vector (31 downto 0);
 	o_PC		 	: out std_logic_vector (31 downto 0)
@@ -48,29 +54,29 @@ end mips_datapath_unicycle;
 
 architecture Behavioral of mips_datapath_unicycle is
 
-
-component MemInstructions is
-    Port ( i_addresse : in std_logic_vector (31 downto 0);
-           o_instruction : out std_logic_vector (31 downto 0));
-end component;
-
-component MemDonneesWideDual is
-Port ( 
-	clk : in std_logic;
-	reset : in std_logic;
-	i_MemRead 	: in std_logic;
-	i_MemWrite : in std_logic;
-    i_Addresse : in std_logic_vector (31 downto 0);
-	i_WriteData : in std_logic_vector (31 downto 0);
-    o_ReadData : out std_logic_vector (31 downto 0);
     
-	i_MemReadWide       : in std_logic;
-	i_MemWriteWide 		: in std_logic;
-	i_WriteDataWide 	: in std_logic_vector (127 downto 0);
-    o_ReadDataWide 		: out std_logic_vector (127 downto 0)
-);
-end component;
-
+    component MemInstructions is
+        Port ( i_addresse : in std_logic_vector (31 downto 0);
+               o_instruction : out std_logic_vector (31 downto 0));
+    end component;
+    
+    component MemDonneesWideDual is
+    Port ( 
+        clk : in std_logic;
+        reset : in std_logic;
+        i_MemRead 	: in std_logic;
+        i_MemWrite : in std_logic;
+        i_Addresse : in std_logic_vector (31 downto 0);
+        i_WriteData : in std_logic_vector (31 downto 0);
+        o_ReadData : out std_logic_vector (31 downto 0);
+        
+        i_MemReadWide       : in std_logic;
+        i_MemWriteWide 		: in std_logic;
+        i_WriteDataWide 	: in std_logic_vector (127 downto 0);
+        o_ReadDataWide 		: out std_logic_vector (127 downto 0)
+    );
+    end component;
+    
 	component BancRegistres is
 	Port ( 
 		clk : in std_logic;
@@ -255,8 +261,8 @@ Port map(
 	i_WriteData => s_reg_data2,
     o_ReadData	=> s_MemoryReadData,
     
-	i_MemReadWide => s_EnMemReadV,
-	i_MemWriteWide => s_EnMemWriteV,
+	i_MemReadWide => i_VectMemRead,
+	i_MemWriteWide => i_VectMemWrite,
 	i_WriteDataWide => s_MemWriteV,
     o_ReadDataWide => s_MemReadV
 	);
