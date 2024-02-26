@@ -101,6 +101,7 @@ begin
         
     end process;
     
+    -- pick between ALU_V or SIMD_CORE result
     o_simd_result <= s_v_result when ( i_simd_opcode = OP_Vtype ) else s_v_mov;
     
     

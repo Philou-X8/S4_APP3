@@ -32,6 +32,8 @@ Port (
     o_RegWrite  	: out std_logic;
     
     o_simd  	    : out std_logic; -- should use SIMD instead
+    o_VectMemRead   : out std_logic;
+    o_VectMemWrite  : out std_logic;
     
 	
 	-- Sorties supp. vs 4.17
@@ -180,5 +182,10 @@ begin
 								i_Op = OP_MOVZV or 
 								i_Op = OP_ROTV 
 						else '0';
-
+    
+    o_VectMemRead 	<= '1' when i_Op = OP_LWV else '0';
+    o_VectMemWrite 	<= '1' when i_Op = OP_SWV else '0';
+    
+    
+    
 end Behavioral;
