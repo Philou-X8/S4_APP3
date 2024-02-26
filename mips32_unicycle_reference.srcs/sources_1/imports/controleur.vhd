@@ -181,7 +181,7 @@ begin
 	o_mfhi          <= '1' when i_op = OP_Rtype and i_funct_field = ALUF_MFHI else '0';
 	
 	-- SIMD control
-	o_simd		    <= '1' when (i_Op = OP_Vtype or 
+	o_simd		    <= '1' when i_Op = OP_Vtype or 
 								i_Op = OP_LWV or 
 								i_Op = OP_SWV or 
 								i_Op = OP_MOVNV or 
