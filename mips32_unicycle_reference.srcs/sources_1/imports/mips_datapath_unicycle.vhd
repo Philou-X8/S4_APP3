@@ -54,7 +54,7 @@ component MemInstructions is
            o_instruction : out std_logic_vector (31 downto 0));
 end component;
 
-component MemDonnees is
+component MemDonneesWideDual is
 Port ( 
 	clk : in std_logic;
 	reset : in std_logic;
@@ -62,7 +62,12 @@ Port (
 	i_MemWrite : in std_logic;
     i_Addresse : in std_logic_vector (31 downto 0);
 	i_WriteData : in std_logic_vector (31 downto 0);
-    o_ReadData : out std_logic_vector (31 downto 0)
+    o_ReadData : out std_logic_vector (31 downto 0);
+    
+	i_MemReadWide       : in std_logic;
+	i_MemWriteWide 		: in std_logic;
+	i_WriteDataWide 	: in std_logic_vector (127 downto 0);
+    o_ReadDataWide 		: out std_logic_vector (127 downto 0)
 );
 end component;
 
@@ -130,6 +135,12 @@ end component;
     -- registres spéciaux pour la multiplication
     signal r_HI             : std_logic_vector(31 downto 0);
     signal r_LO             : std_logic_vector(31 downto 0);
+    
+    
+    signal s_MemReadV       : std_logic_vector(127 downto 0);
+    signal s_MemWriteV      : std_logic_vector(127 downto 0);
+	signal s_EnMemReadV           : std_logic;
+	signal s_EnMemWriteV           : std_logic;
 	
 
 begin
@@ -234,7 +245,7 @@ port map(
 ------------------------------------------------------------------------
 -- Mémoire de données
 ------------------------------------------------------------------------
-inst_MemDonnees : MemDonnees
+inst_MemDonneesV : MemDonneesWideDual
 Port map( 
 	clk 		=> clk,
 	reset 		=> reset,
@@ -242,9 +253,13 @@ Port map(
 	i_MemWrite	=> i_MemWrite,
     i_Addresse	=> s_AluResult,
 	i_WriteData => s_reg_data2,
-    o_ReadData	=> s_MemoryReadData
+    o_ReadData	=> s_MemoryReadData,
+    
+	i_MemReadWide => s_EnMemReadV,
+	i_MemWriteWide => s_EnMemWriteV,
+	i_WriteDataWide => s_MemWriteV,
+    o_ReadDataWide => s_MemReadV
 	);
-	
 
 ------------------------------------------------------------------------
 -- Mux d'écriture vers le banc de registres
